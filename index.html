@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Fuel &amp; Service tracker</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Manager</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- iPhone app feel -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="header">Fuel Manager</div>
+
+<!-- DASHBOARD -->
+<div class="card dashboard-tab">
+  <div class="dashboard">
+
+    <div class="stat">
+      <h2 id="mpg">0.0</h2>
+      <p>Avg MPG</p>
+    </div>
+
+    <div class="stat">
+      <h2 id="costMile">$0.00</h2>
+      <p>Cost / Mile</p>
+    </div>
+
+    <div class="stat">
+      <h2 id="total">$0.00</h2>
+      <p>Total Spent</p>
+    </div>
+
+  </div>
+
+  <div class="stats-extra">
+    <p id="bestMPG"></p>
+    <p id="worstMPG"></p>
+  </div>
+
+  <canvas id="chart"></canvas>
+</div>
+
+<!-- FUEL TAB -->
+<div class="card fuel-tab">
+  <h3>Add Fuel</h3>
+  <input id="miles" placeholder="Miles">
+  <input id="gallons" placeholder="Gallons">
+  <input id="cost" placeholder="Cost">
+  <button onclick="addEntry()">Add Fill-Up</button>
+
+  <h3>History</h3>
+  <div id="history"></div>
+</div>
+
+<!-- SERVICE TAB -->
+<div class="card service-tab">
+  <h3>Maintenance</h3>
+  <input id="service" placeholder="Service">
+  <input id="serviceCost" placeholder="Cost">
+  <button onclick="addService()">Add Service</button>
+
+  <div id="serviceHistory"></div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button onclick="showTab('dashboard-tab')">Home</button>
+  <button onclick="showTab('fuel-tab')">Fuel</button>
+  <button onclick="showTab('service-tab')">Service</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
